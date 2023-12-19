@@ -37,6 +37,35 @@
         ``` RUN npx create-react-app@<version> <name of the application> ```
     - @<version> is only specified when you want a specific version to be used, if don't give it, it automatically picks up the latest version.
 
-## Essential JavaScript for ReactJS
 
+## Components as Building Blocks:
+- React applications are entirely made out of components
+- Building blocks of UI in React
+- Piece of UI that has its own data, logic, and appearance (how it works and looks)
+- We build complex UIs by building multiple components and combining them.
+- Components can be reused, nested inside each other, and pass data between them.
 
+## What is JSX?
+- Declarative syntax to describe what components look like and how they work
+- Components must return a block of JSX
+- Extension of JavaScript that allows us to embed JavaScript,CSS, and React components into HTML.
+- Each JSX element is converted to a React.createElement function call.
+- We could use React without JSX.
+    ### JSX is Declarative
+    - Imperative:
+        - Manual DOM element selections and DOM traversing
+        - Step up step DOM mutations until we reach the desired UI
+    - Declarative:
+        - Describe what UI should look like using JSX, based on current data.
+        - React is an abstarction away from DOM: we never touch the DOM.
+        - Instead we think of UI as a reflection of the current data.
+## Props
+- Props are used to pass data from parent components to child components
+- Essential tool to configure and customize components
+- With props, parent components control how child components look and work
+- Anything can be passed as props: single values, arrays, objects, functions, even other components.
+- Props are read-only!
+    ### Why?
+    - Mutating props would affect parent, creating side effects (not pure)
+    - Components have to be pure functions in terms of props and state
+    - This allows React to optimise apps, avoid bugs, make apps predictable.
